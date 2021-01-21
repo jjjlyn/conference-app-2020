@@ -18,7 +18,7 @@ inline fun <reified T : ViewModel> Fragment.assistedViewModels(
         object : ViewModelProvider.NewInstanceFactory() {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
-                return body() as T
+                return body.invoke() as T
             }
         }
     }

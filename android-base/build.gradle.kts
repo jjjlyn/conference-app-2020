@@ -20,7 +20,8 @@ android {
         versionCode = Versions.androidVersionCode
         versionName = Versions.androidVersionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunnerArguments = mapOf("clearPackageData" to "true")
+
+        setTestInstrumentationRunnerArguments(mutableMapOf("clearPackageData" to "true"))
     }
     signingConfigs {
         getByName("debug") {
